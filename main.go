@@ -53,8 +53,8 @@ func (*conway) Layout(outsideWidth, outsideHeight int) (int, int) {
 
 func main() {
 	ebiten.SetWindowTitle("Conways Game Of Life")
-	game := &conway{life.New(width, height)}
-	if err := ebiten.RunGame(game); err != nil {
+	c := &conway{life.New(width, height)}
+	if err := ebiten.RunGame(c); err != nil {
 		panic(err)
 	}
 }
