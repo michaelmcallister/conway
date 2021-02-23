@@ -33,7 +33,7 @@ func (l *Life) initRand() {
 	for x := 0; x < l.width; x++ {
 		for y := 0; y < l.height; y++ {
 			alive := rand.Float32() > 0.5
-			l.set(x, y, alive)
+			l.Set(x, y, alive)
 		}
 	}
 }
@@ -57,7 +57,8 @@ func (l *Life) alive(x, y int) bool {
 	return l.board[y*l.width+x]
 }
 
-func (l *Life) set(x, y int, alive bool) {
+// Set will set the cell at the x,y co-ordinates to on if alive is true.
+func (l *Life) Set(x, y int, alive bool) {
 	x += l.width
 	x %= l.width
 	y += l.height
