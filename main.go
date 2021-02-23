@@ -1,13 +1,9 @@
 package main
 
 import (
-	"sync"
-
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/michaelmcallister/conway/life"
 )
-
-var waitGroup sync.WaitGroup
 
 const width, height = 320, 240
 
