@@ -18,7 +18,6 @@ func (c *conway) Update() error {
 	if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft) {
 		x, y := ebiten.CursorPosition()
 		c.Life.Set(x, y, true)
-		return nil
 	}
 	c.Life.Step()
 	c.buffer = make([]byte, width*height*4)
